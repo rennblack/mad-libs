@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mad Libs!</title>
+</head>
+	<body>	
+		<h1>Mad Libs!</h1>
+		<div id="output"></div>
+		
+
+		<script>	
+		let promptA = prompt("Please enter an item of clothing.");
+		let promptB = prompt("Please name a body part.");
+		let promptC = prompt("Please name a different body part.");
+		let promptD = prompt("Please enter a verb in its base form.");
+		let promptE = prompt("Please name another body part.");
+		let promptF = prompt("Please enter a different verb in base form.");
+		let promptG = prompt("Please enter a noun (plural).");
+		let promptH = prompt("Please enter another noun (plural).");
+		let promptI = prompt("Please enter another verb in its base form.");
+
+		let floss = {
+			clothing: promptA,
+			body1: promptB,
+			body2: promptC,
+			verb1: promptD,
+			body3: promptE,
+			verb2: promptF,
+			noun1: promptG,
+			noun2: promptH,
+			verb3: promptI
+		};
+
+		let flossing = function(object){
+			let output = 
+			`How to do The Floss Dance
+			
+			1) Put on some music
+			2) Put on a ${object.clothing} ( optional )
+			3) Stand with your ${object.body1} ever so slightly bent
+			4) Put your hands in fists
+			5) Place your ${object.body2}, relaxed, at the side of your body
+			6) Begin to ${object.verb1} your ${object.body3} left and right around your torso in the opposite direction to your hips
+			7) Keep doing it and increase speed and ${object.verb2} ${object.noun1} occasionally for effect
+			After building confidence, you can also ${object.noun2} ${object.verb3} with your arms if
+			desired, but this is not mandatory.`;
+			return output;
+		}
+		document.getElementById("output").innerHTML = flossing(floss);
+
+			
+		</script>
+	</body>
+</html>
